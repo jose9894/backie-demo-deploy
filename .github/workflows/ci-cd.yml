@@ -31,7 +31,6 @@ jobs:
         run: dotnet test --configuration Release --logger "trx;LogFileName=TestResults.trx"
 
       - name: Upload test results
-        working-directory: ./simply_deploy
         uses: actions/upload-artifact@v4
         with:
           name: TestResults
