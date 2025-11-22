@@ -41,10 +41,11 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21                     # <-- ADD THIS if your host uses port 21 (most do)
-          protocol: ftp                # or ftps if required
           local-dir: ./simply_deploy/BettingApi/bin/Release/net9.0/win-x86/publish/   # <-- update to your publish path
           server-dir: /public_html/    # same as your hosting provider
-          dangerous-clean-slate: false # <-- IMPORTANT! prevents deleting everything
-          exclude: |
-            .well-known/**            
+          # dangerous-clean-slate: false # <-- IMPORTANT! prevents deleting everything
+          # exclude: |
+          #   .well-known/**            
+
+          # port: 21                    
+          # protocol: ftp                
