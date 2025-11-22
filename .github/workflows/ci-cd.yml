@@ -19,15 +19,12 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Restore dependencies
-        working-directory: ./BettingApi
         run: dotnet restore 
 
       - name: Build the solution
-        working-directory: ./BettingApi
         run: dotnet build --configuration Release --no-restore
 
       - name: Run unit test 
-        working-directory: ./BettingApi.Test
         run: dotnet test --configuration Release --logger "trx;LogFileName=TestResults.trx"
 
       - name: Upload test results
