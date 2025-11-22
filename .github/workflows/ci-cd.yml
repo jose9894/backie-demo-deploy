@@ -32,6 +32,7 @@ jobs:
 
 
       - name: Publish
+        working-directory: ./simply_deploy/BettingApi
         run: dotnet publish -c Release --self-contained -r win-x86
 
       - name: Deploy via FTP
